@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main()
+{
+    int a[20],n, even=0, odd=0,j=0,i,res;
+        long int num;
+    int choice;
+    printf("\n-----------------------------------");
+    printf("\n-----MECONG DELTA APTECH-----------");
+    printf("\n-----BATCH CP1986G05---------------");
+    printf("\n-------------ROLLNO:A00000---------");
+    printf("\n-CANTHO UNIVERSITY SOFTWARE CENTER-");
+    printf("\n-----------------------------------");
+    printf("\n---1.Quit--------------------------");
+    printf("\n---2.quesion 2---------------------");
+    printf("\n---3.quesion 3---------------------");
+    printf("\nenter choice: ");
+    scanf("%d", &choice);
+    if (choice==1)
+    printf("quit");
+    else if (choice==2)
+    {
+
+        printf("enter any interger number: ");
+        scanf("%ld", &num);
+        while(num!=0)
+        {
+            res=num%10;
+            if (res%2==1)
+            {
+                odd++;
+                a[j]=res*res;
+                j++;
+            }
+            else
+            even++;
+            num=num/10;
+        }
+        printf("\nthe number of odds%d ", odd);
+        printf("\nthe number of even%d ", even);
+        printf("\nsquare of the odd numbers: ");
+        for(i=j-1;i>=0;i--)
+        printf("%d\t", a[i]);
+    }
+
+    return 0;
+}
